@@ -3,15 +3,19 @@ What’s the difference between calling the method puts and returning a value fr
 The difference between 'puts' and returning a value from a method is that 'puts' is just printing something to the screen/console, whereas returning a value doesn't print anything but sets the value to the method so it can be used.
 
 Basically, 'puts' is a method that prints what you give it. 
-#def hello
-#  puts('Hey!')
-#end
-#hello
+```Ruby
+def hello
+  puts('Hey!')
+end
+hello
 #This will print 'Hey!' but 'return' nil
-
+```
 By default, a method 'returns' the last thing evaluated as the value of the method
-#def hello
-#  'Hey!'
-#end
-#hello
+```Ruby
+def hello
+  'Hey!'
+end
+hello
+
 #This will print nothing but 'return' 'Hey!'
+```
