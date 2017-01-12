@@ -1,4 +1,4 @@
-What’s the difference between calling the method puts and returning a value from a method?
+##What’s the difference between calling the method puts and returning a value from a method?
 
 The difference between 'puts' and returning a value from a method is that 'puts' is just printing something to the screen/console, whereas returning a value doesn't print anything but sets the value to the method so it can be used.
 
