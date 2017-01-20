@@ -4,8 +4,6 @@ An instance variable in Ruby start with the '@' symbol and can only be reference
 ##The method '.next' for Integers
 The 'int.next' method simply returns the integer that is equal to (int + 1)
 ```
-3.next
-#This will return 4 because (3 + 1) = 4
-(-4).next 
-#This will return -3
+3.next #This will return 4 because (3 + 1) = 4
+(-4).next #This will return -3
 ```
