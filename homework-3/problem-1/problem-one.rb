@@ -1,13 +1,11 @@
-# class Utility
-#   def count_words(string)
-#     string.each_with_object(Hash.new(0)) { |word,counts| counts[word] += 1 }
-#   end
-# end
+class Utility
+  def self.count_words(string)
+    word = string.split(/[\s,]+/)
+    counts = Hash.new(0)
+    word.each { |word| counts[word.downcase] += 1 }
+    counts
+  end
+end
 
 
-def count_words(string)
-     string.each_with_object(Hash.new(0)) { |word,counts| counts[word] += 1 }
-     puts string
-   end
-
-count_words("it was the best of times, it was the worst of times")
+puts Utility.count_words('it was the best of times, it was the worst of times')

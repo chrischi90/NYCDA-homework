@@ -1,1 +1,2 @@
-#What is the difference between an HTTP GET request and a POST request?
+##What is the difference between an HTTP GET request and a POST request?
+A HTTP GET request requests data to be retrieved from a specified resource/server and is passed through a query string in the URL. Because it is passed as a query in the URL, a GET request can be cached, is saved in the browser history, and has a length limit. A HTTP POST request sends data to be processed and is sent through the body. Because the POST request is sent through the body, it is NOT cached, saved in the browser, and has no length limit.
