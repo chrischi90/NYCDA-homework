@@ -1,10 +1,9 @@
 class Animal
-
   def sound
   end
 
   def speak
-    puts('The animal says: #{self.sound}')
+    puts("The animal says #{self.sound}")
   end
 end
 
