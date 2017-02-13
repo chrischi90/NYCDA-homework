@@ -24,4 +24,11 @@ user.update_attribute(:name, "Greg")
 
 ### MORE Rails Console CRUD operations
 
+user = User.create(name: "Chris", email: "chris@test.com")
+property = Property.create(street_address: "1234 apple st", city: "New York", state: "NY")
+
+user.create(property: property)
+user.property
+
+user = User.find_by(property: property)
 
