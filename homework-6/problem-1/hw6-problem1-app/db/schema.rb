@@ -11,7 +11,41 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170208043416) do
+ActiveRecord::Schema.define(version: 20170208160507) do
+
+  create_table "booking_requests", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "property_id"
+    t.date     "start_date"
+    t.date     "end_date"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "booking_slots", force: :cascade do |t|
+    t.boolean  "available"
+    t.date     "start_date"
+    t.date     "end_date"
+    t.integer  "property_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "hosts", force: :cascade do |t|
+    t.string   "name"
+    t.string   "email"
+    t.integer  "host_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "photos", force: :cascade do |t|
+    t.string   "url"
+    t.string   "caption"
+    t.integer  "property_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "properties", force: :cascade do |t|
     t.string   "street_address"
