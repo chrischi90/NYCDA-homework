@@ -21,3 +21,7 @@ User.find(1)
 user = User.find(2)
 
 user.update_attribute(:name, "Greg")
+
+### MORE Rails Console CRUD operations
+
+
