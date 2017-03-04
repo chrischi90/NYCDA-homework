@@ -8,7 +8,24 @@
 </head>
 <body>
 
-<%= yield %>
+  <nav>
+    <p> <a> <%= link_to("All Users", users_path) %> </a></p>
+
+    <% if user_signed_in?%>
+      <p>You are logged in as <%= current_user.email %></p>
+      <p><%= link_to('My Profile', current_user) %></p>
+      <p><%= link_to('Log Out', destroy_user_session_path, method: :delete) %></p>
+    <% else %>
+      <p> <a> <%= link_to("Log In", user_session_path) %> </a></p>
+      <p> <a> <%= link_to("Sign Up", new_user_registration_path) %> </a></p>
+    <% end %>
+  </nav>
+
+
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+
+  <%= yield %>
 
 </body>
 </html>
